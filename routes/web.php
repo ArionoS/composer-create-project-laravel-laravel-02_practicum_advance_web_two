@@ -70,3 +70,6 @@ Route::get('/about-us', function () {
 Route::resource('/contact-us', ContactController::class)->only([
     'index'
    ]);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
